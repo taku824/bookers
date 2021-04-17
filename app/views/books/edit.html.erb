@@ -1,0 +1,25 @@
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+
+
+
+  <h1>Editing Book</h1>
+  
+  
+  <div class="new-book">
+  
+          <p>Title</p>
+          <%= f.text_field :title %>
+          <p>Body</p>
+          <%= f.text_area :body %>
+          <div>
+              <%= f.submit 'Update Book' %>
+          </div>
+  </div>
+  
+  <div class="buttons">
+  <%= link_to "Show", "/books/#{@book.id}/show" %>
+  |
+  <%= link_to "Back", "/books" %>
+</div>
+  
+  <% end %>

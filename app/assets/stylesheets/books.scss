@@ -2,12 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// reset
 *{
   margin: 0;
   padding: 0;
   box-sizeing: border-box;
 }
 
+// index
+table{
+  margin: 10px 20px;
+  margin-bottom: 30px;
+}
+
+td{
+  padding: 10px 5px;
+}
+
 .new-book{
   margin: 0 20px;
 }
+
+// show
+.show-p{
+  margin: 30px 50px;
+  // line-height: 50px;
+}
+.buttons{
+  margin: 20px;
+}
+
+.notifications{
+  color: #00aa00;
+  margin: 20px 70px;
+}
+
+

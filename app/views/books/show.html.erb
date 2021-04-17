@@ -1,0 +1,26 @@
+<div class="notifications">
+  <% flash.each do |message_type, message| %>
+    <%= message %>
+  <% end %>
+</div>
+
+
+<p>
+<% if request.referer == "https://0026770ab13d4ee095746610bf342af4.vfs.cloud9.us-east-1.amazonaws.com/books/" %>
+Book was successfully created.
+<% else %>
+
+<% end %>
+</p>
+
+
+
+<p class="show-p"><b>Title:</b><%= @book.title %></p>
+<p class="show-p"><b>Body:</b><%= @book.body %></p>
+
+<div class="buttons">
+  <%= link_to "Edit", "/books/#{@book.id}/edit" %>
+  |
+  <%= link_to "Back", "/books" %>
+</div>
+
