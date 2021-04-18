@@ -5,6 +5,18 @@
   <h1>Editing Book</h1>
   
   
+  <div class="alert">
+        <% if @book.errors.any? %>
+            <!--<%= @book.errors.count %>件のエラーが発生しました-->
+            <% @book.errors.full_messages.each do |message| %>
+                <%= message %>
+            <% end %>
+        <% end %>
+    </div>
+  
+  
+  
+  
   <div class="new-book">
   
           <p>Title</p>
@@ -15,6 +27,7 @@
               <%= f.submit 'Update Book' %>
           </div>
   </div>
+  
   
   <div class="buttons">
   <%= link_to "Show", "/books/#{@book.id}/show" %>
